@@ -15,9 +15,10 @@ const errormiddleware=require('./middlewares/errorMiddleware')
 Connectmongo();
 
 var corsOptions = {
-  origin: ['http://localhost:3000', 'http://localhost:3001', 'https://jovese.netlify.app/'],
+  origin: ['http://localhost:3000', 'http://localhost:3001', 'https://jovese.netlify.app'],
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
+  headers: ['Content-Type', 'Authorization']
 }
 
 app.use(cors(corsOptions));
